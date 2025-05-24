@@ -252,8 +252,6 @@ Setiap model dilatih menggunakan data latih dan kemudian dievaluasi performanya 
 
 * **F1-score**: Harmonik rata-rata dari precision dan recall, mengukur keseimbangan keduanya.
 
-Visualisasi confusion matrix serta laporan klasifikasi (classification report) disajikan untuk masing-masing model pada data pelatihan dan pengujian. Ini memberikan gambaran lengkap tentang kemampuan model dalam mengenali kelas diabetes dan non-diabetes.
-
 ---
 
 ## 5. Kesimpulan
