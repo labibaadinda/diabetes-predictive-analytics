@@ -64,3 +64,28 @@ Meskipun bukan penyakit klinis, istilah *pre-diabetes* digunakan untuk menggamba
 ### Referensi
 
 - [Understanding diabetes mellitus: biochemical and clinical perspectives – ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1357303918302627)
+
+## Business Understanding
+
+### Problem Statement
+
+Berdasarkan latar belakang masalah yang telah dijelaskan sebelumnya, rumusan masalah (*problem statements*) dalam proyek ini adalah sebagai berikut:
+
+1. Bagaimana cara memprediksi penyakit diabetes mellitus menggunakan algoritma machine learning?
+
+2. Bagaimana mengembangkan model machine learning yang efektif untuk prediksi penyakit diabetes?
+
+3. Bagaimana evaluasi kinerja model machine learning yang telah dibuat dalam memprediksi penyakit diabetes?
+
+### Goals
+
+Berdasarkan rumusan masalah yang telah dirumuskan sebelumnya, berikut adalah tujuan dari proyek machine learning ini:
+
+1. Mempelajari penerapan algoritma machine learning dalam melakukan prediksi penyakit diabetes mellitus.
+
+2. Memahami seluruh tahapan pengembangan model machine learning mulai dari tahap awal hingga penyelesaian, khususnya untuk prediksi diabetes mellitus.
+
+3. Mengevaluasi dan menilai kinerja model machine learning yang telah dibangun dalam memprediksi penyakit diabetes.
+
+
+

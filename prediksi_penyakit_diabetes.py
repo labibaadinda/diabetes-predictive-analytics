@@ -297,7 +297,9 @@ plt.show()
 * **Age:** Sebagian besar 20-40 tahun, ada outlier usia lanjut.
 * **Outcome:** Variabel biner, tidak ada outlier.
 
-### 3. 3. Data Preprocessing
+## 4. Data Wrangling
+
+### 4. 1. Data Preprocessing
 
 **Outlier Handling**
 """
@@ -391,7 +393,7 @@ plt.show()
 
 """Data yang tidak seimbang (imbalanced data) telah berhasil ditangani, data sekarang sudah seimbang dan siap digunakan untuk tahap pengembangan model.
 
-### 3. 4. **Data Splitting**
+### 4. 2. **Data Splitting**
 
 Setelah melakukan beberapa percobaan (sebelumnya menggunakan pembagian 80:20), pada kasus ini dataset akan dibagi dengan rasio 70:30, yakni 70% untuk data pelatihan dan 30% untuk data pengujian.
 """
@@ -404,7 +406,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 print("Data Latih (Train):", X_train.shape)
 print("Data Uji (Test):", X_test.shape)
 
-"""### 3. 4. Standardisasi
+"""### 4. 3. Standardisasi
 
 Sebelum membangun model machine learning, dilakukan proses standardisasi terlebih dahulu. Tahap ini bertujuan untuk mengubah fitur numerik dalam data sehingga memiliki nilai rata-rata nol dan standar deviasi satu.
 """
@@ -413,7 +415,7 @@ num_pipeline = Pipeline([('std_scaler', StandardScaler())])
 X_train_prepared = num_pipeline.fit_transform(X_train)
 X_test_prepared = num_pipeline.transform(X_test)
 
-"""## 4. Modeling dan Evaluate"""
+"""## 5. Modeling dan Evaluate"""
 
 def evaluate(clf, X_train, y_train, X_test, y_test, train=False):
 
@@ -490,7 +492,7 @@ svm_model.fit(X_train, y_train)
 evaluate(svm_model, X_train, y_train, X_test, y_test, train=True)
 evaluate(svm_model, X_train, y_train, X_test, y_test, train=False)
 
-"""## 5. Kesimpulan"""
+"""## 6. Kesimpulan"""
 
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
 
