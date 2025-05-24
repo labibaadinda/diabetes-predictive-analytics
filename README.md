@@ -281,11 +281,11 @@ Berdasarkan hasil evaluasi, dapat diambil beberapa poin penting terkait performa
 * **Logistic Regression** memiliki nilai F1-score terbaik, menunjukkan keseimbangan optimal antara precision dan recall, yang sangat penting dalam konteks mendeteksi penyakit diabetes dengan menghindari prediksi salah.
 <br>
   <br>
-    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/test_logistic_best_f1.png" alt="logistic regression train data" width="400" />
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/logistic_train_best_f1.png" alt="logistic regression train data" width="400" />
     </p>
 <p align='center'>Gambar 9.  Confusion Matrix Logistic Regression(Train)</p>
   <br>
-    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/logistic_train_best_f1.png" alt="logistic regression test data" width="400" />
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/test_logistic_best_f1.png" alt="logistic regression test data" width="400" />
     </p>
 <p align='center'>Gambar 10.  Confusion Matrix Logistic Regression(Test)</p>
 
