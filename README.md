@@ -254,7 +254,7 @@ Setiap model dilatih menggunakan data latih dan kemudian dievaluasi performanya 
 
 ---
 
-## 5. Kesimpulan
+## Kesimpulan
 
 Berdasarkan hasil evaluasi, dapat diambil beberapa poin penting terkait performa model:
 
