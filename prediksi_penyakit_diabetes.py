@@ -88,6 +88,8 @@ df.describe()
 
 df.duplicated().sum()
 
+df.isnull().sum()
+
 """**Hasil Analisis** :
 
 - Hasil dari explorasi dataset menunjukkan bahwa tidak ada missing value dan tidak ada juga data yang duplicated
