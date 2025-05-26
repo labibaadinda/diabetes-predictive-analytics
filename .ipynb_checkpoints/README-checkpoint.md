@@ -221,106 +221,40 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
 
 ## Modeling
 
+### Modeling dan Evaluate
+
 Pada tahap ini, dilakukan pengembangan beberapa model machine learning dengan menggunakan algoritma klasifikasi yang berbeda, antara lain:
 
-### 1. Random Forest 
+* **Random Forest**  
+Algoritma ensemble learning yang menggabungkan banyak pohon keputusan (decision trees) untuk meningkatkan akurasi prediksi. Model ini dilatih dengan parameter utama seperti jumlah pohon (*n\_estimators*), kedalaman maksimum pohon (*max\_depth*), dan jumlah fitur maksimum yang dipertimbangkan (*max\_features*).
 
-Random Forest adalah algoritma ensemble learning yang menggabungkan banyak pohon keputusan (decision trees) secara acak untuk meningkatkan akurasi dan mengurangi risiko overfitting. Model ini bekerja dengan membangun sejumlah pohon (estimators), di mana setiap pohon dilatih pada subset data dan fitur secara acak. Model ini dilatih dengan parameter utama seperti jumlah pohon (*n\_estimators*), kedalaman maksimum pohon (*max\_depth*), dan jumlah fitur maksimum yang dipertimbangkan (*max\_features*).
+* **XGBoost**
+  Algoritma boosting yang memanfaatkan gradient boosting untuk membangun model klasifikasi dengan performa tinggi. Digunakan untuk menangani data dengan kompleksitas tinggi dan fitur yang beragam.
 
-**Parameter utama:**
+* **Logistic Regression**
+  Model regresi yang digunakan untuk prediksi probabilitas kelas biner, dalam hal ini prediksi status diabetes atau tidak.
 
-  * `n_estimators=50`: jumlah pohon keputusan yang dibangun. Pilihan ini menyeimbangkan akurasi dan waktu pelatihan.
-  * `max_depth=5`: membatasi kedalaman maksimum pohon agar tidak terlalu kompleks, mengurangi risiko overfitting.
-  * `max_features='sqrt'`: jumlah fitur yang dipilih secara acak saat mencari split terbaik, meningkatkan diversitas antar pohon.
-  * `random_state=42`: memastikan hasil pelatihan yang konsisten dan dapat direproduksi.
+* **K-Nearest Neighbors (KNN)**
+  Algoritma non-parametrik yang mengklasifikasikan data berdasarkan kedekatan jarak ke tetangga terdekat.
 
-### 2. XGBoost
+* **Support Vector Machine (SVM)**
+  Algoritma yang mencari hyperplane terbaik untuk memisahkan kelas dengan margin maksimal, digunakan dengan kernel radial basis function (RBF) untuk menangani data non-linear.
 
-XGBoost adalah metode boosting berbasis gradient boosting yang membangun model secara iteratif, di mana setiap pohon baru berusaha memperbaiki kesalahan prediksi dari model sebelumnya. Algoritma ini terkenal karena kemampuannya menangani data kompleks dan fitur yang beragam dengan performa tinggi.
+Setiap model dilatih menggunakan data latih dan kemudian dievaluasi performanya dengan data uji. Evaluasi menggunakan:
 
-**Parameter utama:**
+* **Confusion Matrix**: Menampilkan jumlah prediksi benar dan salah pada masing-masing kelas, divisualisasikan menggunakan heatmap.
 
-  * `n_estimators=100`: jumlah total pohon yang dibangun secara bertahap.
-  * `max_depth=5`: membatasi kompleksitas tiap pohon untuk menghindari overfitting.
-  * `learning_rate=0.1`: tingkat pembelajaran yang mengontrol kontribusi tiap pohon, menjaga kestabilan model.
-  * `use_label_encoder=False`: menyesuaikan dengan versi terbaru XGBoost, menghindari warning.
-  * `eval_metric='logloss'`: metrik evaluasi yang digunakan selama pelatihan, sesuai untuk klasifikasi biner.
-  * `random_state=42`: memastikan konsistensi hasil.
+* **Accuracy**: Persentase prediksi benar terhadap keseluruhan data.
 
-### 3. Logistic Regression
+* **Precision**: Ketepatan model dalam memprediksi kelas positif.
 
-Logistic Regression adalah model statistik yang digunakan untuk memprediksi probabilitas kejadian biner, yaitu apakah seorang pasien mengidap diabetes atau tidak. Model ini menghitung hubungan linier antara fitur independen dan log odds dari target.
+* **Recall**: Kemampuan model untuk menemukan seluruh data kelas positif.
 
-**Parameter utama:**
-
-  * `max_iter=1000`: jumlah maksimum iterasi untuk algoritma optimasi, memastikan model konvergen pada dataset kompleks.
-  * `random_state=42`: menjaga hasil pelatihan agar konsisten.
-
-
-
-
-### 4. K-Nearest Neighbors (KNN)
-
-KNN adalah algoritma non-parametrik yang mengklasifikasikan data berdasarkan kedekatan jarak ke tetangga terdekat dalam ruang fitur. Prediksi kelas ditentukan oleh mayoritas kelas dari `k` tetangga terdekat.
-
-**Parameter utama:**
-
-  * `n_neighbors=5`: jumlah tetangga yang diperhitungkan dalam pengambilan keputusan klasifikasi. Nilai ini seimbang antara sensitivitas dan kestabilan prediksi.
-
-
-### 5. Support Vector Machine (SVM)
-
-SVM adalah algoritma yang mencari hyperplane terbaik untuk memisahkan kelas dengan margin maksimal. Dengan kernel RBF, SVM dapat menangani data yang tidak linear secara efektif.
-
-**Parameter utama:**
-
-  * `probability=True`: mengaktifkan prediksi probabilitas, berguna untuk evaluasi model.
-  * `random_state=42`: menjaga hasil konsisten.
-
-## Evaluasi Model
-
-###  1. Random Forest
-
-* Accuracy: 74.46% — Model mampu memprediksi dengan benar sekitar 74% pada data testing.
-* F1-Score: 0.6144 — Menunjukkan keseimbangan baik antara precision dan recall, khususnya di kelas minoritas.
-* AUC-ROC: 0.8035 — Menjadi nilai tertinggi di antara semua model, menunjukkan kemampuan terbaik dalam membedakan pasien diabetes dan non-diabetes.
-* Kesimpulan: Model ini stabil dan akurat, cocok digunakan sebagai solusi utama dalam prediksi diabetes.
-
-
-### 2. XGBoost
-
-* Accuracy: 74.03% — Performa akurasi mirip dengan Random Forest, sedikit lebih rendah.
-* F1-Score: 0.6386 — Nilai F1 tertinggi di antara semua model, menandakan performa yang sangat baik dalam menangani ketidakseimbangan kelas.
-* AUC-ROC: 0.7946 — Agak lebih rendah dibanding Random Forest, namun tetap sangat baik.
-* Kesimpulan: Model ini sangat baik dalam mengelola trade-off precision dan recall, layak menjadi alternatif utama.
-
-
-### 3. Logistic Regression
-
-* Accuracy: 74.46% — Sama dengan Random Forest dalam hal akurasi.
-* F1-Score: 0.6242 — Performa baik, walau sedikit di bawah XGBoost.
-* AUC-ROC: 0.8006 — Mendekati performa terbaik, menunjukkan kemampuan klasifikasi yang cukup baik.
-* Kesimpulan: Sebagai model baseline, Logistic Regression menunjukkan hasil yang solid dan mudah diinterpretasikan.
-
-
-### 4. K-Nearest Neighbors (KNN)
-
-* Accuracy: 68.83% — Performa akurasi terendah di antara model yang diuji.
-* F1-Score: 0.5556 — Kinerja lebih rendah dalam menyeimbangkan precision dan recall.
-* AUC-ROC: 0.7268 — Jauh di bawah model lain, menandakan keterbatasan dalam membedakan kelas.
-* Kesimpulan: Model ini kurang cocok untuk dataset ini dan prediksi diabetes yang kompleks.
-
-
-### 5. Support Vector Machine (SVM)
-
-* Accuracy: 74.89% — Akurasi terbaik di antara model-model lain.
-* F1-Score: 0.5915 — Masih di bawah XGBoost dan Logistic Regression dalam hal keseimbangan precision-recall.
-* AUC-ROC: 0.7776 — Performa bagus namun tidak sebaik Random Forest dan Logistic Regression.
-* Kesimpulan: Model ini layak dipertimbangkan, terutama jika akurasi menjadi prioritas, namun perlu tuning lebih lanjut untuk meningkatkan F1-Score.
+* **F1-score**: Harmonik rata-rata dari precision dan recall, mengukur keseimbangan keduanya.
 
 ---
 
-### Kesimpulan 
+## Kesimpulan
 
 Berdasarkan hasil evaluasi, dapat diambil beberapa poin penting terkait performa model:
 
@@ -332,23 +266,38 @@ Berdasarkan hasil evaluasi, dapat diambil beberapa poin penting terkait performa
 | KNN                 | 68.83%     | 0.5556     | 0.7268     |
 | SVM                 | **74.89%** | 0.5915     | 0.7776     |
 
+* **Random Forest** menjadi model dengan nilai AUC-ROC tertinggi, yang berarti model ini paling baik dalam membedakan antara penderita diabetes dan non-diabetes secara keseluruhan.
 
-* **Random Forest** merupakan model terbaik berdasarkan nilai AUC-ROC tertinggi (0.8035), yang menunjukkan kemampuannya paling baik dalam membedakan pasien dengan diabetes dan tanpa diabetes secara keseluruhan. Model ini juga memiliki keseimbangan baik antara akurasi dan F1-Score, sehingga cocok untuk digunakan dalam aplikasi prediksi klinis.
+<br>
+  <br>
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/train_random_forest_best_auc.png" alt="random forest train data" width="400" />
+    </p>
+<p align='center'>Gambar 7.  Confusion Matrix Random Forest (Train)</p>
+  <br>
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/test_random_forest_best_auc.png" alt="random forest test data" width="400" />
+    </p>
+<p align='center'>Gambar 8.  Confusion Matrix Random Forest(Test)</p>
 
-* **XGBoost** menunjukkan performa F1-Score tertinggi (0.6386), menandakan efektivitasnya dalam menangani ketidakseimbangan kelas dan menjaga keseimbangan antara precision dan recall. Namun, AUC-ROC-nya sedikit di bawah Random Forest.
+* **Logistic Regression** memiliki nilai F1-score terbaik, menunjukkan keseimbangan optimal antara precision dan recall, yang sangat penting dalam konteks mendeteksi penyakit diabetes dengan menghindari prediksi salah.
+<br>
+  <br>
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/logistic_train_best_f1.png" alt="logistic regression train data" width="400" />
+    </p>
+<p align='center'>Gambar 9.  Confusion Matrix Logistic Regression(Train)</p>
+  <br>
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/test_logistic_best_f1.png" alt="logistic regression test data" width="400" />
+    </p>
+<p align='center'>Gambar 10.  Confusion Matrix Logistic Regression(Test)</p>
 
-* **Logistic Regression** sebagai model baseline memberikan hasil yang kompetitif dan mudah diinterpretasikan, dengan AUC-ROC yang cukup mendekati model terbaik, menjadikannya pilihan baik jika interpretabilitas penting.
+* **SVM** menunjukkan nilai akurasi terbaik pada data pengujian, namun dengan nilai F1-score dan AUC sedikit lebih rendah dibandingkan Random Forest dan Logistic Regression, menandakan potensi kelemahan dalam mengidentifikasi kelas minoritas (penderita diabetes).
 
-* **Support Vector Machine (SVM)** memiliki akurasi tertinggi (74.89%), namun F1-Score dan AUC-ROC-nya masih di bawah Random Forest dan XGBoost, sehingga perlu tuning lebih lanjut agar lebih optimal.
+* **XGBoost** dan **KNN** menunjukkan performa yang lebih rendah di semua metrik evaluasi, terutama KNN yang berada pada posisi paling bawah.
 
-* **K-Nearest Neighbors (KNN)** menunjukkan performa paling rendah di semua metrik, kurang cocok untuk dataset dan masalah ini.
+Secara keseluruhan, model **Random Forest**, **Logistic Regression**, dan **SVM** memberikan performa yang kompetitif dan layak dipertimbangkan untuk diaplikasikan, tergantung prioritas metrik evaluasi yang diutamakan dalam proyek, seperti fokus pada AUC untuk kemampuan pemisahan kelas, atau F1-score untuk keseimbangan precision-recall.
 
 
-Berdasarkan evaluasi berbagai model machine learning dalam proyek prediksi penyakit diabetes, dapat disimpulkan bahwa:
 
-- **Model yang dikembangkan telah berhasil menjawab seluruh problem statement** yang diajukan, yaitu mampu memprediksi status diabetes secara efektif menggunakan data medis pasien. Model terbaik, Random Forest, menunjukkan performa akurasi dan AUC-ROC yang memadai untuk mendukung diagnosis klinis.
 
-- **Tujuan proyek telah tercapai dengan baik,** meliputi pemahaman penerapan algoritma machine learning, pengembangan model yang tepat, serta evaluasi kinerja secara menyeluruh menggunakan metrik akurasi, F1-score, dan AUC. Proses ini memberikan gambaran lengkap tentang kekuatan dan keterbatasan tiap model.
 
 
 
