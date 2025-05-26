@@ -217,6 +217,7 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
 <br>
 
 4. **Outliers**
+<br>
   Visualisasi boxplot di bawah bertujuan untuk mendeteksi adanya pencilan (outliers) dalam dataset yang digunakan pada proyek machine learning. Hal ini penting karena keberadaan outliers dapat menyebabkan bias atau menurunkan akurasi model dalam melakukan prediksi.
 
   <br>
