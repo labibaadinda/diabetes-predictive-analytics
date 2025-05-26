@@ -215,18 +215,14 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
   * Korelasi antar fitur tidak terlalu tinggi (tidak ada multikolinearitas kuat), sehingga fitur-fitur tersebut bisa digunakan bersamaan tanpa banyak redundansi.
 
 <br>
-<br>
 
 4. **Outliers**
-<br>
   Visualisasi boxplot di bawah bertujuan untuk mendeteksi adanya pencilan (outliers) dalam dataset yang digunakan pada proyek machine learning. Hal ini penting karena keberadaan outliers dapat menyebabkan bias atau menurunkan akurasi model dalam melakukan prediksi.
 
   <br>
     <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/plot_outlier.png" alt="plot outlier" width="400" />
     </p>
 <p align='center'>Gambar 5. Mengecek outliers</p>
-
-
 
 
 ## Data Preparation
