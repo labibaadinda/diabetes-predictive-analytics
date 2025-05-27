@@ -573,7 +573,11 @@ Berdasarkan hasil evaluasi, dapat diambil beberapa poin penting terkait performa
 | XGBoost             | 0.7403   |**0.6386**| 0.7946     |
 | Logistic Regression | 0.7446   | 0.6242   | 0.8006     |
 | KNN                 | 0.6883   | 0.5556   | 0.7268     |
+<<<<<<< HEAD
 | SVM                 | 0.7489   | 0.5915   | 0.7776     |
+=======
+| SVM                 | 0.7489   | 0.5915   | 0.7776     |   |
+>>>>>>> 717833b (first commit)
 
 
 * **Random Forest** merupakan model terbaik berdasarkan nilai AUC-ROC tertinggi (0.8035), yang menunjukkan kemampuannya paling baik dalam membedakan pasien dengan diabetes dan tanpa diabetes secara keseluruhan. Model ini juga memiliki keseimbangan baik antara akurasi dan F1-Score, sehingga cocok untuk digunakan dalam aplikasi prediksi klinis.
