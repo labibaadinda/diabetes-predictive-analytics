@@ -97,7 +97,7 @@ Berdasarkan rumusan masalah yang telah dirumuskan sebelumnya, berikut adalah tuj
 
 Berdasarkan *problem statements* dan *goals* yang telah dijelaskan sebelumnya, berikut adalah *solution statements* dalam proyek machine learning ini:
 
-1. Melaksanakan proses pengembangan model machine learning secara menyeluruh, mulai dari *Import Library*, *Data Loading*, *Exploratory Data Analysis* (EDA), *Data Wrangling*, pembuatan model (*modelling*), hingga evaluasi (*evaluation*).
+1. Melaksanakan proses pengembangan model machine learning secara menyeluruh, mulai dari *Import Library*, *Data Loading*, *Exploratory Data Analysis* (EDA), *Data Preparation*, pembuatan model (*modelling*), hingga evaluasi (*evaluation*).
 
 2. Mengembangkan model machine learning dengan menggunakan algoritma klasifikasi yang sesuai untuk memprediksi kelas (diabetes atau non-diabetes) berdasarkan dataset yang tersedia. Algoritma yang digunakan dalam proyek ini antara lain:
     - *Random Forest Classification*: algoritma ensemble learning yang menggabungkan banyak pohon keputusan (decision trees) untuk meningkatkan akurasi dan performa prediksi.
