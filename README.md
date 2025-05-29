@@ -228,7 +228,7 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
 
 ## Data Wrangling
 
-*Data Wrangling* adalah proses mengolah data mentah agar menjadi format yang tepat untuk analisis atau proses selanjutnya. Beberapa teknik yang digunakan dalam tahap persiapan data pada proyek ini antara lain:
+*Data Wrangling* adalah proses mengolah data mentah agar menjadi format yang tepat untuk analisis atau proses selanjutnya. Beberapa teknik yang digunakan dalam tahap data wrangling pada proyek ini antara lain:
 
 1. **Data Preprocessing**
 
