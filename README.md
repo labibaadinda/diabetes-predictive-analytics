@@ -226,9 +226,9 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
 <p align='center'>Gambar 5. Mengecek outliers</p>
 
 
-## Data Wrangling
+## Data Preparation
 
-*Data Wrangling* adalah proses mengolah data mentah agar menjadi format yang tepat untuk analisis atau proses selanjutnya. Beberapa teknik yang digunakan dalam tahap data wrangling pada proyek ini antara lain:
+*Data Preparation* adalah proses mengolah data mentah agar menjadi format yang tepat untuk analisis atau proses selanjutnya. Beberapa teknik yang digunakan dalam tahap data preparation pada proyek ini antara lain:
 
 1. **Data Preprocessing**
 
