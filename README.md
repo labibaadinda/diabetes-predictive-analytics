@@ -226,11 +226,14 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
 <p align='center'>Gambar 5. Mengecek outliers</p>
 
 
-## Data Preparation
+## Data Wrangling
 
 *Data preparation* adalah proses mengolah data mentah agar menjadi format yang tepat untuk analisis atau proses selanjutnya. Beberapa teknik yang digunakan dalam tahap persiapan data pada proyek ini antara lain:
 
-1. **Penanganan outliers**
+1. **Data Preprocessing**
+
+**Outlier Handling**
+
 - *Outliers* adalah nilai-nilai yang menyimpang jauh dari nilai-nilai lain dalam dataset. Nilai-nilai ini muncul sebagai anomali yang tidak mengikuti pola umum data. Outliers bisa berupa nilai yang jauh lebih tinggi atau lebih rendah dibandingkan data lainnya, dan dapat disebabkan oleh kesalahan pengukuran, kejadian yang jarang terjadi, atau faktor tak terduga lainnya.
 
 - Tujuan dari penanganan outliers adalah untuk memastikan bahwa nilai-nilai ekstrem tersebut tidak mengganggu analisis statistik atau model machine learning yang dikembangkan. Karena outliers berpotensi memberikan informasi yang menyesatkan dan mempengaruhi hasil analisis, penting untuk menanganinya agar hasil yang diperoleh lebih akurat dan dapat diandalkan.
@@ -242,7 +245,7 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
     </p>
 <p align='center'>Gambar 6. Setelah outliers Handling</p>
 
-2. **Handling imbalanced data**
+**Imbalance Data Handling dengan metode SMOTE**
    
    - *Imbalanced data* adalah kondisi di mana distribusi jumlah kelas dalam dataset tidak merata.
    
@@ -258,7 +261,7 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
 <p align='center'>Gambar 7. Imbalanced data handling</p>
 
 
-3. **Data Splitting**
+2. **Data Splitting**
    
    - Data Splitting adalah proses pemisahan *dataset* menjadi beberapa bagian yang berbeda untuk keperluan tertentu dalam analisis data, seperti pelatihan, validasi, dan pengujian model.
    
@@ -266,7 +269,7 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
    
    - Metode yang digunakan dalam proses ini adalah *Train-test split*.
 
-4. **Standardization**
+3. **Standardization**
    
    - Standardisasi merupakan proses pengubahan data agar memiliki rata-rata (*mean*) sebesar nol dan varians (*variance*) sebesar satu.
    
