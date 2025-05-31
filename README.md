@@ -570,15 +570,13 @@ Berdasarkan hasil evaluasi, berikut rangkuman performa beberapa model:
 
 </p>
 
-* **Random Forest** unggul pada AUC-ROC tertinggi (0.8375), menandakan kemampuan terbaik membedakan pasien dengan dan tanpa diabetes secara keseluruhan, serta keseimbangan baik antara akurasi dan F1-score. Cocok untuk aplikasi prediksi klinis.
+* **Logistic Regression** unggul berdasarkan nilai **AUC-ROC tertinggi (0.8453)**, yang menunjukkan kemampuan terbaik dalam membedakan pasien dengan dan tanpa diabetes secara keseluruhan. Meskipun akurasi (0.7467) dan F1-score (0.7467) sedikit lebih rendah dibanding model lain, keunggulan AUC-ROC menjadikannya pilihan utama terutama bila interpretabilitas juga dipertimbangkan.
 
-* **XGBoost** memiliki F1-Score tertinggi (0.7778), efektif menangani ketidakseimbangan kelas dan menjaga keseimbangan precision-recall. Namun AUC-ROC sedikit lebih rendah dari Random Forest.
+* **Support Vector Machine (SVM)** memiliki akurasi tertinggi (0.7800) dan F1-score terbaik (0.7898), namun AUC-ROC-nya sedikit di bawah Logistic Regression (0.8443), sehingga performanya cukup kompetitif namun perlu tuning untuk lebih optimal.
 
-* **Logistic Regression** sebagai model baseline menunjukkan AUC-ROC terbaik (0.8453), menjadikannya pilihan baik bila interpretabilitas penting, meskipun akurasi dan F1-score sedikit di bawah model lain.
+* **Random Forest** dan **KNN** memiliki performa cukup baik dengan AUC-ROC di kisaran 0.83-an, namun masih di bawah Logistic Regression dan SVM.
 
-* **SVM** memiliki akurasi (0.78) dan F1-Score (0.7898) tertinggi, tapi AUC-ROC-nya lebih rendah dari Logistic Regression dan Random Forest, menunjukkan perlu tuning lebih lanjut.
-
-* **KNN** memiliki performa paling rendah secara umum, kurang ideal untuk dataset ini.
+* **XGBoost** memiliki F1-score tertinggi (0.7778), menunjukkan keefektifan dalam menangani ketidakseimbangan kelas, namun AUC-ROC-nya (0.8215) paling rendah di antara model-model tersebut.
 
 ### Hubungan dengan Business Understanding
 
@@ -589,4 +587,4 @@ Berdasarkan hasil evaluasi, berikut rangkuman performa beberapa model:
 ---
 
 **Kesimpulan akhir:**
-Berdasarkan metrik AUC-ROC sebagai indikator utama, **Logistic Regression** terpilih sebagai model terbaik dengan skor 0.8453, walaupun SVM dan Random Forest menunjukkan akurasi dan F1-Score yang kompetitif. Pemilihan model akhir bisa mempertimbangkan kebutuhan khusus seperti interpretabilitas dan keseimbangan precision-recall.
+> Berdasarkan metrik AUC-ROC sebagai indikator utama, **Logistic Regression** terpilih sebagai model terbaik dengan skor 0.8453, walaupun SVM dan Random Forest menunjukkan akurasi dan F1-Score yang kompetitif. Pemilihan model akhir bisa mempertimbangkan kebutuhan khusus seperti interpretabilitas dan keseimbangan precision-recall.
