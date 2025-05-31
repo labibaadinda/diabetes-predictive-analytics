@@ -141,7 +141,7 @@ Link dataset: [Diabetes Dataset](https://www.kaggle.com/datasets/whenamancodes/p
 
 1. **Univariate Analysis**
 <br>
-    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/plot_distribusi_outcome.png" alt="hist outcome" width="400" />
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/plot_distribusi_outcome.png" alt="hist outcome" width="400" />
     </p>
   <p align='center'>Gambar 1. Bar Diagram Diabetes & Non-Diabetes</p> 
   Berdasarkan visualisasi grafik Bar Diagram pada gambar 1 di atas menunjukkan bahwa jumlah penderita penyakit diabetes yaitu 268 orang (34,9 %). Sedangkan jumlah orang yang non-diabetes yaitu  500 orang (65,1%) dari total keseluruhan jumlah orang dalam dataset (768 orang).
@@ -149,7 +149,7 @@ Link dataset: [Diabetes Dataset](https://www.kaggle.com/datasets/whenamancodes/p
 
 2. **Multivariate Analysis**
 <br>
-    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/histogram_col_numerik.png" alt="hist numeric col" width="400" />
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/histogram_col_numerik.png" alt="hist numeric col" width="400" />
     </p>
 <p align='center'>Gambar 2. Visualisasi feature numerik</p>
 <br>
@@ -158,13 +158,13 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
   Visualisasi pada gambar 3 di bawah menggambarkan hubungan antar fitur dalam dataset. Dari gambar tersebut, terlihat bahwa tingkat korelasi antar fitur bervariasi; beberapa fitur menunjukkan korelasi yang lemah atau bahkan tidak memiliki korelasi sama sekali, sementara beberapa fitur lain memiliki korelasi meskipun tidak terlalu kuat.
   
   <br>
-    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/sns_pairplot.png" alt="multivariate" width="400" />
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/sns_pairplot.png" alt="multivariate" width="400" />
     </p>
   <p align='center'>Gambar 3. Visualisasi multivariate analysis</p>
 
 3. **Correlation antar Fitur**
   <br>
-    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/corr_heatmap.png" alt="correlation heatmap" width="400" />
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/corr_heatmap.png" alt="correlation heatmap" width="400" />
     </p>
 <p align='center'>Gambar 4. Korelasi Fitur </p>
 
@@ -221,7 +221,7 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
   Visualisasi boxplot di bawah bertujuan untuk mendeteksi adanya pencilan (outliers) dalam dataset yang digunakan pada proyek machine learning. Hal ini penting karena keberadaan outliers dapat menyebabkan bias atau menurunkan akurasi model dalam melakukan prediksi.
 
   <br>
-    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/plot_outlier.png" alt="plot outlier" width="400" />
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/plot_outlier.png" alt="plot outlier" width="400" />
     </p>
 <p align='center'>Gambar 5. Mengecek outliers</p>
 
@@ -241,7 +241,7 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
 - Beberapa cara yang dapat digunakan untuk menangani outliers meliputi identifikasi outliers, transformasi data, penghapusan outliers, dan imputasi data. Pada proyek ini, penanganan outliers dilakukan dengan metode imputasi menggunakan pendekatan *IQR method*. Hasil dari metode imputasi ini dapat dilihat pada gambar 5 berikut:
 
   <br>
-    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/plot_after_outlier_handling.png" alt="plot outlier" width="400" />
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/plot_after_outlier_handling.png" alt="plot outlier" width="400" />
     </p>
 <p align='center'>Gambar 6. Setelah outliers Handling</p>
 
@@ -256,7 +256,7 @@ Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pa
    - Dalam proyek ini, penanganan data tidak seimbang dilakukan menggunakan metode *SMOTE* (*Synthetic Minority Over-sampling Technique*), yang membuat sampel sintetis untuk kelas minoritas (kelas "1" pada kolom *Outcome*). Dengan cara ini, jumlah kelas minoritas dapat disamakan dengan kelas mayoritas, sehingga mengurangi bias model terhadap kelas mayoritas dan meningkatkan performa model untuk memprediksi kelas minoritas.
 
   <br>
-    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/plot_distribusi_ttg_oversampling.png" alt="oversampling handling" width="400" />
+    <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/plot_distribusi_ttg_oversampling.png" alt="oversampling handling" width="400" />
     </p>
 <p align='center'>Gambar 7. Imbalanced data handling</p>
 
@@ -340,52 +340,47 @@ SVM adalah algoritma yang mencari hyperplane terbaik untuk memisahkan kelas deng
 ###  1. Random Forest
   <br>
   <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/6.1-evaluation-random-forest-train.png" alt="Evaluation Random Forest Train Data" width="400" />
+    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.1-evaluation-random-forest-train.png" alt="Evaluation Random Forest Train Data" width="400" />
   </p>
 <p align='center'>Gambar 8. Evaluation Random Forest (Train Data)</p>
 
 <p align="center">
 
-| Kelas         | Precision | Recall | F1-Score | Support |
-|---------------|-----------|--------|----------|---------|
-| 0             | 0.88      | 0.95   | 0.91     | 349     |
-| 1             | 0.90      | 0.76   | 0.82     | 188     |
-| **Accuracy**  |           |        | **0.88** | 537     |
-| **Macro Avg** | 0.89      | 0.85   | 0.87     | 537     |
-| **Weighted Avg**| 0.89    | 0.88   | 0.88     | 537     |
+| Kelas            | Precision | Recall | F1-Score | Support |
+| ---------------- | --------- | ------ | -------- | ------- |
+| 0                | 0.91      | 0.84   | 0.88     | 351     |
+| 1                | 0.85      | 0.92   | 0.88     | 349     |
+| **Accuracy**     |           |        | **0.88** | 700     |
+| **Macro Avg**    | 0.88      | 0.88   | 0.88     | 700     |
+| **Weighted Avg** | 0.88      | 0.88   | 0.88     | 700     |
 
 </p>
 
-
-Pada evaluasi model Random Forest untuk data training, model ini menunjukkan akurasi sebesar 88,45%, yang berarti mampu memprediksi dengan benar sekitar 88% dari data training. Untuk kelas 0, precision mencapai 0,88, artinya dari semua prediksi kelas 0, 88% tepat, sedangkan recall sebesar 0,95 menandakan model berhasil mendeteksi 95% dari seluruh data sebenarnya kelas 0. F1-score untuk kelas 0 sebesar 0,91 menunjukkan keseimbangan baik antara precision dan recall, yang menandakan performa yang bagus. Untuk kelas 1, precision sebesar 0,90 mengindikasikan prediksi kelas 1 yang cukup akurat, meskipun recall lebih rendah yaitu 0,76, yang berarti model hanya menangkap 76% dari data kelas 1 sebenarnya. F1-score kelas 1 sebesar 0,82 sedikit lebih rendah dibanding kelas 0, menunjukkan performa kelas 1 masih baik tetapi ada ruang untuk perbaikan. Secara keseluruhan, model fit cukup baik pada data training dengan performa sedikit lebih baik pada kelas mayoritas (kelas 0).
+Pada evaluasi model Logistic Regression untuk data training, model menunjukkan akurasi sebesar 88,00%, menandakan model dapat memprediksi dengan benar sekitar 88% data pelatihan. Precision kelas 0 sebesar 0,91 berarti dari semua prediksi kelas 0, 91% adalah benar. Recall kelas 0 sebesar 0,84 menunjukkan model berhasil mendeteksi 84% dari data kelas 0 yang sebenarnya. F1-score kelas 0 sebesar 0,88 menunjukkan performa seimbang antara precision dan recall. Pada kelas 1, precision sebesar 0,85 menunjukkan prediksi kelas 1 yang cukup akurat, recall sebesar 0,92 berarti 92% data kelas 1 berhasil dikenali. F1-score kelas 1 sebesar 0,88 menandakan performa yang baik dan seimbang pada kelas ini. Secara keseluruhan, model fit dengan baik pada data training.
 
   <br>
   <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/6.1-evaluation-random-forest-test.png" alt="Evaluation Random Forest Test Data" width="400" />
+    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.1-evaluation-random-forest-test.png" alt="Evaluation Random Forest Test Data" width="400" />
   </p>
 <p align='center'>Gambar 9. Evaluation Random Forest (Test Data)</p>
 
 <p align="center">
 
-| Kelas         | Precision | Recall | F1-Score | Support |
-|---------------|-----------|--------|----------|---------|
-| 0             | 0.79      | 0.83   | 0.81     | 151     |
-| 1             | 0.64      | 0.59   | 0.61     | 80      |
-| **Accuracy**  |           |        | **0.74** | 231     |
-| **Macro Avg** | 0.72      | 0.71   | 0.71     | 231     |
-| **Weighted Avg**| 0.74    | 0.74   | 0.74     | 231     |
+| Kelas            | Precision | Recall | F1-Score | Support |
+| ---------------- | --------- | ------ | -------- | ------- |
+| 0                | 0.79      | 0.70   | 0.74     | 149     |
+| 1                | 0.73      | 0.81   | 0.77     | 151     |
+| **Accuracy**     |           |        | **0.76** | 300     |
+| **Macro Avg**    | 0.76      | 0.76   | 0.76     | 300     |
+| **Weighted Avg** | 0.76      | 0.76   | 0.76     | 300     |
 
 </p>
-
-Pada evaluasi data test, akurasi menurun menjadi 74,46%, yang menandakan adanya penurunan performa dibandingkan data training, kemungkinan karena model mengalami overfitting atau data test memiliki karakteristik yang lebih menantang. Precision untuk kelas 0 turun menjadi 0,79, namun model masih mampu menangkap sebagian besar kelas 0 dengan recall 0,83 dan F1-score 0,81 yang masih cukup baik. Sementara itu, precision kelas 1 turun cukup signifikan menjadi 0,64, dan recall juga menurun menjadi 0,59, menunjukkan model kurang efektif dalam mendeteksi kelas minoritas pada data test. F1-score kelas 1 juga menurun menjadi 0,61, yang mengindikasikan performa kelas 1 perlu peningkatan. Kesimpulannya, meskipun model masih bekerja baik untuk kelas mayoritas pada data test, performanya kurang optimal untuk kelas minoritas.
-
-Secara keseluruhan, model Random Forest ini cukup akurat dan stabil saat diuji pada data training. Namun, penurunan performa terutama pada kelas minoritas saat pengujian data test mengindikasikan potensi overfitting yang perlu menjadi perhatian dalam pengembangan model selanjutnya.
-
+Pada evaluasi data test, model menunjukkan akurasi 75,67%, mengalami penurunan dibanding data training. Precision dan recall menurun pada kedua kelas, menunjukkan model memiliki performa yang lebih rendah saat diuji dengan data baru. Namun demikian, performa masih cukup baik dengan F1-score kelas 0 sebesar 0,74 dan kelas 1 sebesar 0,77. Model ini menunjukkan kemampuan generalisasi yang cukup namun masih perlu peningkatan terutama pada data test.
 
 ### 2. XGBoost
   <br>
   <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/6.2-evaluation-XGBoost-train.png" alt="Evaluation XGBoost Train Data" width="400" />
+    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.2-evaluation-XGBoost-train.png" alt="Evaluation XGBoost Train Data" width="400" />
   </p>
 <p align='center'>Gambar 10. Evaluation XGBoost (Train Data)</p>
 
@@ -406,7 +401,7 @@ Model XGBoost menunjukkan performa yang sangat baik pada data training dengan ak
 
   <br>
   <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/6.2-evaluation-XGBoost-test.png" alt="Evaluation XGBoost Test Data" width="400" />
+    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.2-evaluation-XGBoost-test.png" alt="Evaluation XGBoost Test Data" width="400" />
   </p>
 <p align='center'>Gambar 11. Evaluation XGBoost (Test Data)</p>
 
@@ -431,7 +426,7 @@ Secara keseluruhan, model XGBoost sangat kuat dan efektif saat pelatihan dengan 
 ### 3. Logistic Regression
   <br>
   <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/6.3-evaluation-LogisticRegression-train.png" alt="Evaluation Logistic Regression Train Data" width="400" />
+    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.3-evaluation-LogisticRegression-train.png" alt="Evaluation Logistic Regression Train Data" width="400" />
   </p>
 <p align='center'>Gambar 12. Evaluation Logistic Regression (Train Data)</p>
 
@@ -452,7 +447,7 @@ Model Logistic Regression berhasil memprediksi dengan benar sekitar 78.21% data 
 
   <br>
   <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/6.3-evaluation-LogisticRegression-test.png" alt="Evaluation Logistic Regression Test Data" width="400" />
+    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.3-evaluation-LogisticRegression-test.png" alt="Evaluation Logistic Regression Test Data" width="400" />
   </p>
 <p align='center'>Gambar 13. Evaluation Logistic Regression (Test Data)</p>
 
@@ -476,7 +471,7 @@ Secara keseluruhan, Logistic Regression berfungsi sebagai baseline yang cukup ba
 ### 4. K-Nearest Neighbors (KNN)
   <br>
   <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/6.4-evaluation-knn_model-train.png" alt="Evaluation KNN Train Data" width="400" />
+    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.4-evaluation-knn_model-train.png" alt="Evaluation KNN Train Data" width="400" />
   </p>
 <p align='center'>Gambar 14. Evaluation KNN (Train Data)</p>
 
@@ -497,7 +492,7 @@ Model K-Nearest Neighbors (KNN) mampu memprediksi dengan benar sekitar 80.45% da
 
   <br>
   <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/6.4-evaluation-knn_model-test.png" alt="Evaluation KNN Test Data" width="400" />
+    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.4-evaluation-knn_model-test.png" alt="Evaluation KNN Test Data" width="400" />
   </p>
 <p align='center'>Gambar 15. Evaluation KNN (Test Data)</p>
 
@@ -522,7 +517,7 @@ Model KNN menunjukkan performa baik pada data training, tetapi mengalami penurun
 ### 5. Support Vector Machine (SVM)
 <br>
   <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/6.5-evaluation-svm_model-train.png" alt="Evaluation SVM Train Data" width="400" />
+    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.5-evaluation-svm_model-train.png" alt="Evaluation SVM Train Data" width="400" />
   </p>
 <p align='center'>Gambar 16. Evaluation SVM (Train Data)</p>
 
@@ -543,7 +538,7 @@ Model Support Vector Machine (SVM) memprediksi dengan benar sekitar 78.03% data 
 
   <br>
   <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/predictive_analytics/main/img/6.5-evaluation-svm_model-test.png" alt="Evaluation SVM Test Data" width="400" />
+    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.5-evaluation-svm_model-test.png" alt="Evaluation SVM Test Data" width="400" />
   </p>
 <p align='center'>Gambar 17. Evaluation SVM (Test Data)</p>
 
