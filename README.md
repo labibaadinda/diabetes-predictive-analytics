@@ -335,16 +335,19 @@ SVM adalah algoritma yang mencari hyperplane terbaik untuk memisahkan kelas deng
   * `probability=True`: mengaktifkan prediksi probabilitas, berguna untuk evaluasi model.
   * `random_state=42`: menjaga hasil konsisten.
 
+
+
 ## Evaluasi Model
 
-###  1. Random Forest
-  <br>
-  <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.1-evaluation-random-forest-train.png" alt="Evaluation Random Forest Train Data" width="400" />
-  </p>
-<p align='center'>Gambar 8. Evaluation Random Forest (Train Data)</p>
+### 1. Random Forest
 
-<p align="center">
+<br>  
+<p align='center'>  
+  <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.1-evaluation-random-forest-train.png" alt="Evaluation Random Forest Train Data" width="400" />  
+</p>  
+<p align='center'>Gambar 8. Evaluation Random Forest (Train Data)</p>  
+
+<p align="center">  
 
 | Kelas            | Precision | Recall | F1-Score | Support |
 | ---------------- | --------- | ------ | -------- | ------- |
@@ -354,17 +357,17 @@ SVM adalah algoritma yang mencari hyperplane terbaik untuk memisahkan kelas deng
 | **Macro Avg**    | 0.88      | 0.88   | 0.88     | 700     |
 | **Weighted Avg** | 0.88      | 0.88   | 0.88     | 700     |
 
-</p>
+</p>  
 
-Pada evaluasi model Logistic Regression untuk data training, model menunjukkan akurasi sebesar 88,00%, menandakan model dapat memprediksi dengan benar sekitar 88% data pelatihan. Precision kelas 0 sebesar 0,91 berarti dari semua prediksi kelas 0, 91% adalah benar. Recall kelas 0 sebesar 0,84 menunjukkan model berhasil mendeteksi 84% dari data kelas 0 yang sebenarnya. F1-score kelas 0 sebesar 0,88 menunjukkan performa seimbang antara precision dan recall. Pada kelas 1, precision sebesar 0,85 menunjukkan prediksi kelas 1 yang cukup akurat, recall sebesar 0,92 berarti 92% data kelas 1 berhasil dikenali. F1-score kelas 1 sebesar 0,88 menandakan performa yang baik dan seimbang pada kelas ini. Secara keseluruhan, model fit dengan baik pada data training.
+Pada evaluasi model Random Forest untuk data training, model menunjukkan akurasi sebesar 88,00%, menandakan model dapat memprediksi dengan benar sekitar 88% dari data pelatihan. Precision kelas 0 sebesar 0,91 berarti dari semua prediksi kelas 0, 91% adalah benar. Recall kelas 0 sebesar 0,84 menunjukkan model berhasil mendeteksi 84% dari data kelas 0 yang sebenarnya. F1-score kelas 0 sebesar 0,88 menunjukkan performa seimbang antara precision dan recall. Pada kelas 1, precision sebesar 0,85 menunjukkan prediksi kelas 1 yang cukup akurat, recall sebesar 0,92 berarti 92% data kelas 1 berhasil dikenali. F1-score kelas 1 sebesar 0,88 menandakan performa yang baik dan seimbang pada kelas ini. Secara keseluruhan, model fit dengan baik pada data training.
 
-  <br>
-  <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.1-evaluation-random-forest-test.png" alt="Evaluation Random Forest Test Data" width="400" />
-  </p>
-<p align='center'>Gambar 9. Evaluation Random Forest (Test Data)</p>
+<br>  
+<p align='center'>  
+  <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.1-evaluation-random-forest-test.png" alt="Evaluation Random Forest Test Data" width="400" />  
+</p>  
+<p align='center'>Gambar 9. Evaluation Random Forest (Test Data)</p>  
 
-<p align="center">
+<p align="center">  
 
 | Kelas            | Precision | Recall | F1-Score | Support |
 | ---------------- | --------- | ------ | -------- | ------- |
@@ -374,220 +377,224 @@ Pada evaluasi model Logistic Regression untuk data training, model menunjukkan a
 | **Macro Avg**    | 0.76      | 0.76   | 0.76     | 300     |
 | **Weighted Avg** | 0.76      | 0.76   | 0.76     | 300     |
 
-</p>
+</p>  
+
 Pada evaluasi data test, model menunjukkan akurasi 75,67%, mengalami penurunan dibanding data training. Precision dan recall menurun pada kedua kelas, menunjukkan model memiliki performa yang lebih rendah saat diuji dengan data baru. Namun demikian, performa masih cukup baik dengan F1-score kelas 0 sebesar 0,74 dan kelas 1 sebesar 0,77. Model ini menunjukkan kemampuan generalisasi yang cukup namun masih perlu peningkatan terutama pada data test.
 
+Berikut format lengkap untuk evaluasi **model XGBoost** sesuai data yang kamu berikan dan struktur yang diinginkan:
+
 ### 2. XGBoost
-  <br>
-  <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.2-evaluation-XGBoost-train.png" alt="Evaluation XGBoost Train Data" width="400" />
-  </p>
-<p align='center'>Gambar 10. Evaluation XGBoost (Train Data)</p>
 
-<p align="center">
+<br>  
+<p align='center'>  
+  <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.2-evaluation-XGBoost-train.png" alt="Evaluation XGBoost Train Data" width="400" />  
+</p>  
+<p align='center'>Gambar 10. Evaluation XGBoost (Train Data)</p>  
 
-| Kelas         | Precision | Recall | F1-Score | Support |
-|---------------|-----------|--------|----------|---------|
-| 0             | 0.99      | 1.00   | 1.00     | 349     |
-| 1             | 0.99      | 0.99   | 0.99     | 188     |
-| **Accuracy**  |           |        | **0.99** | 537     |
-| **Macro Avg** | 0.99      | 0.99   | 0.99     | 537     |
-| **Weighted Avg**| 0.99    | 0.99   | 0.99     | 537     |
+<p align="center">  
 
-</p>
+| Kelas            | Precision | Recall | F1-Score | Support |
+| ---------------- | --------- | ------ | -------- | ------- |
+| 0                | 0.99      | 0.99   | 0.99     | 351     |
+| 1                | 0.99      | 0.99   | 0.99     | 349     |
+| **Accuracy**     |           |        | **0.99** | 700     |
+| **Macro Avg**    | 0.99      | 0.99   | 0.99     | 700     |
+| **Weighted Avg** | 0.99      | 0.99   | 0.99     | 700     |
 
+</p>  
 
-Model XGBoost menunjukkan performa yang sangat baik pada data training dengan akurasi mencapai 99.44%, menandakan hampir seluruh data training dapat diprediksi dengan benar tanpa kesalahan yang berarti. Precision untuk kelas 0 mencapai 0.99, yang berarti dari seluruh prediksi kelas 0, 99% di antaranya benar-benar kelas 0. Recall kelas 0 sempurna pada nilai 1.00, menunjukkan model berhasil mendeteksi seluruh data asli kelas 0 tanpa ada yang terlewat. F1-score kelas 0 yang juga mencapai 1.00 menegaskan performa optimal pada kelas ini. Begitu pula pada kelas 1, precision dan recall masing-masing 0.99, yang berarti hampir semua data kelas 1 terdeteksi dengan tepat, dan f1-score sebesar 0.99 menunjukkan performa yang sangat tinggi pada kelas ini. Namun, performa luar biasa ini pada data training mengindikasikan model kemungkinan mengalami overfitting, yakni terlalu menyesuaikan diri dengan data training sehingga bisa kurang optimal pada data baru.
+Model XGBoost menunjukkan performa yang sangat baik pada data training dengan akurasi mencapai 99.14%, menandakan hampir seluruh data training dapat diprediksi dengan benar tanpa kesalahan yang berarti. Precision dan recall untuk kedua kelas mencapai 0.99, mengindikasikan model berhasil mengenali hampir seluruh data kelas 0 dan kelas 1 dengan sangat akurat. F1-score yang juga sebesar 0.99 menegaskan performa optimal model pada data training. Namun, performa luar biasa ini juga mengindikasikan kemungkinan model mengalami overfitting, yaitu terlalu menyesuaikan diri dengan data training sehingga performa pada data baru bisa menurun.
 
-  <br>
-  <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.2-evaluation-XGBoost-test.png" alt="Evaluation XGBoost Test Data" width="400" />
-  </p>
-<p align='center'>Gambar 11. Evaluation XGBoost (Test Data)</p>
+<br>  
+<p align='center'>  
+  <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.2-evaluation-XGBoost-test.png" alt="Evaluation XGBoost Test Data" width="400" />  
+</p>  
+<p align='center'>Gambar 11. Evaluation XGBoost (Test Data)</p>  
 
-<p align="center">
+<p align="center">  
 
-| Kelas         | Precision | Recall | F1-Score | Support |
-|---------------|-----------|--------|----------|---------|
-| 0             | 0.81      | 0.78   | 0.80     | 151     |
-| 1             | 0.62      | 0.66   | 0.64     | 80      |
-| **Accuracy**  |           |        | **0.74** | 231     |
-| **Macro Avg** | 0.72      | 0.72   | 0.72     | 231     |
-| **Weighted Avg**| 0.75    | 0.74   | 0.74     | 231     |
+| Kelas            | Precision | Recall | F1-Score | Support |
+| ---------------- | --------- | ------ | -------- | ------- |
+| 0                | 0.80      | 0.68   | 0.74     | 149     |
+| 1                | 0.73      | 0.83   | 0.78     | 151     |
+| **Accuracy**     |           |        | **0.76** | 300     |
+| **Macro Avg**    | 0.76      | 0.76   | 0.76     | 300     |
+| **Weighted Avg** | 0.76      | 0.76   | 0.76     | 300     |
 
-</p>
+</p>  
 
+Pada evaluasi data test, model mengalami penurunan performa cukup signifikan dengan akurasi turun menjadi 76.00%. Precision kelas 0 sebesar 0.80 menunjukkan kemampuan model dalam memprediksi kelas 0 masih cukup baik, namun recall turun ke 0.68 yang menandakan beberapa data kelas 0 terlewat. F1-score kelas 0 sebesar 0.74 masih cukup memadai. Untuk kelas 1, precision menurun menjadi 0.73 dan recall meningkat menjadi 0.83, menunjukkan model lebih baik dalam mendeteksi kelas 1 namun prediksi kurang presisi. F1-score sebesar 0.78 mengindikasikan performa yang baik tapi masih ada ruang untuk peningkatan. Penurunan performa ini terutama pada data test dan pada kelas minoritas (kelas 1) mengindikasikan kemungkinan overfitting pada model.
 
-Pada data test, performa model menurun cukup signifikan dengan akurasi 74.03%, yang menunjukkan model kurang mampu menggeneralisasi pola dari data training ke data baru. Precision kelas 0 masih cukup baik di angka 0.81, memperlihatkan kemampuan model memprediksi kelas 0 secara cukup akurat. Recall kelas 0 sebesar 0.78 mengindikasikan sebagian besar kelas 0 berhasil dideteksi, walaupun ada beberapa yang terlewat. F1-score kelas 0 0.80 menunjukkan performa yang memadai. Namun, untuk kelas 1, precision menurun menjadi 0.62 dan recall sebesar 0.66, yang berarti model kurang akurat dan hanya berhasil mendeteksi sekitar dua pertiga data kelas 1 dengan benar. F1-score 0.64 mengindikasikan performa kelas 1 masih bisa ditingkatkan. Penurunan performa ini terutama terlihat pada kelas minoritas (kelas 1) dan mengonfirmasi dugaan overfitting pada model saat pelatihan. Untuk meningkatkan generalisasi, diperlukan teknik regularisasi atau augmentasi data agar model tidak terlalu spesifik pada data training.
-
-Secara keseluruhan, model XGBoost sangat kuat dan efektif saat pelatihan dengan performa mendekati sempurna. Namun, model kurang mampu menggeneralisasi dengan baik pada data baru, khususnya dalam mendeteksi kelas minoritas (kelas 1). Oleh karena itu, perlu dilakukan perbaikan dan optimasi, misalnya melalui teknik regularisasi, pengaturan hyperparameter, atau penanganan data imbalance agar performa model di data test meningkat dan hasil prediksi menjadi lebih akurat dan dapat diandalkan.
-
+Secara keseluruhan, model XGBoost sangat kuat dan efektif saat pelatihan dengan performa mendekati sempurna. Namun, performa pada data test menurun yang mengindikasikan kurangnya kemampuan generalisasi. Oleh karena itu, perlu dilakukan optimasi lebih lanjut seperti regularisasi, tuning hyperparameter, atau penanganan ketidakseimbangan data untuk meningkatkan performa model pada data baru.
+Berikut format evaluasi **model Logistic Regression** sesuai data yang kamu berikan:
 
 ### 3. Logistic Regression
-  <br>
-  <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.3-evaluation-LogisticRegression-train.png" alt="Evaluation Logistic Regression Train Data" width="400" />
-  </p>
-<p align='center'>Gambar 12. Evaluation Logistic Regression (Train Data)</p>
 
-<p align="center">
+<br>  
+<p align='center'>  
+  <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.3-evaluation-LogisticRegression-train.png" alt="Evaluation Logistic Regression Train Data" width="400" />  
+</p>  
+<p align='center'>Gambar 12. Evaluation Logistic Regression (Train Data)</p>  
 
-| Kelas         | Precision | Recall | F1-Score | Support |
-|---------------|-----------|--------|----------|---------|
-| 0             | 0.80      | 0.89   | 0.84     | 349     |
-| 1             | 0.74      | 0.59   | 0.65     | 188     |
-| **Accuracy**  |           |        | **0.78** | 537     |
-| **Macro Avg** | 0.77      | 0.74   | 0.75     | 537     |
-| **Weighted Avg**| 0.78    | 0.78   | 0.78     | 537     |
+<p align="center">  
 
-</p>
+| Kelas            | Precision | Recall | F1-Score | Support |
+| ---------------- | --------- | ------ | -------- | ------- |
+| 0                | 0.74      | 0.77   | 0.75     | 351     |
+| 1                | 0.76      | 0.72   | 0.74     | 349     |
+| **Accuracy**     |           |        | **0.75** | 700     |
+| **Macro Avg**    | 0.75      | 0.75   | 0.75     | 700     |
+| **Weighted Avg** | 0.75      | 0.75   | 0.75     | 700     |
 
+</p>  
 
-Model Logistic Regression berhasil memprediksi dengan benar sekitar 78.21% data training. Precision untuk kelas 0 adalah 0.80, artinya dari seluruh prediksi kelas 0, 80% tepat. Model ini juga mampu mendeteksi 89% dari seluruh data sebenarnya kelas 0 (recall 0.89), sehingga performa untuk kelas mayoritas cukup baik dengan f1-score 0.84 yang menunjukkan keseimbangan antara precision dan recall. Untuk kelas 1, precision sedikit lebih rendah di angka 0.74, dan recall sebesar 0.59, yang mengindikasikan model masih mengalami kesulitan dalam mengenali kelas minoritas secara akurat. F1-score kelas 1 sebesar 0.65 menegaskan performa yang lebih rendah dibanding kelas 0. Secara keseluruhan, model bekerja cukup baik di data training, terutama pada kelas mayoritas.
+Pada evaluasi model Logistic Regression untuk data training, model menunjukkan akurasi sebesar 74,71%, yang menandakan model dapat memprediksi dengan benar sekitar 75% data pelatihan. Precision kelas 0 sebesar 0,74 berarti dari semua prediksi kelas 0, 74% adalah benar. Recall kelas 0 sebesar 0,77 menunjukkan model berhasil mendeteksi 77% dari data kelas 0 yang sebenarnya. F1-score kelas 0 sebesar 0,75 menunjukkan keseimbangan baik antara precision dan recall. Pada kelas 1, precision sebesar 0,76 menunjukkan prediksi kelas 1 yang cukup akurat, recall sebesar 0,72 berarti 72% data kelas 1 berhasil dikenali. F1-score kelas 1 sebesar 0,74 menandakan performa yang cukup dan seimbang pada kelas ini. Secara keseluruhan, model fit dengan baik pada data training.
 
-  <br>
-  <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.3-evaluation-LogisticRegression-test.png" alt="Evaluation Logistic Regression Test Data" width="400" />
-  </p>
-<p align='center'>Gambar 13. Evaluation Logistic Regression (Test Data)</p>
+<br>  
+<p align='center'>  
+  <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.3-evaluation-LogisticRegression-test.png" alt="Evaluation Logistic Regression Test Data" width="400" />  
+</p>  
+<p align='center'>Gambar 13. Evaluation Logistic Regression (Test Data)</p>  
 
-<p align="center">
+<p align="center">  
 
-| Kelas         | Precision | Recall | F1-Score | Support |
-|---------------|-----------|--------|----------|---------|
-| 0             | 0.80      | 0.81   | 0.81     | 151     |
-| 1             | 0.64      | 0.61   | 0.62     | 80      |
-| **Accuracy**  |           |        | **0.74** | 231     |
-| **Macro Avg** | 0.72      | 0.71   | 0.72     | 231     |
-| **Weighted Avg**| 0.74    | 0.74   | 0.74     | 231     |
+| Kelas            | Precision | Recall | F1-Score | Support |
+| ---------------- | --------- | ------ | -------- | ------- |
+| 0                | 0.74      | 0.75   | 0.75     | 149     |
+| 1                | 0.75      | 0.74   | 0.75     | 151     |
+| **Accuracy**     |           |        | **0.75** | 300     |
+| **Macro Avg**    | 0.75      | 0.75   | 0.75     | 300     |
+| **Weighted Avg** | 0.75      | 0.75   | 0.75     | 300     |
 
-</p>
+</p>  
 
-
-Pada data test, performa model sedikit menurun menjadi 74.46%, namun masih cukup memuaskan. Precision kelas 0 tetap stabil di angka 0.80, dan model mampu mendeteksi 81% data kelas 0 sebenarnya (recall 0.81), sehingga performa untuk kelas mayoritas tetap cukup kuat dengan f1-score 0.81. Sedangkan untuk kelas 1, precision turun menjadi 0.64 dan recall menjadi 0.61, menandakan bahwa model kurang optimal dalam mendeteksi kelas minoritas. F1-score kelas 1 di data test adalah 0.62, yang menunjukkan performa yang masih memadai namun perlu peningkatan, khususnya dalam meningkatkan sensitivitas deteksi kelas minoritas.
-
-Secara keseluruhan, Logistic Regression berfungsi sebagai baseline yang cukup baik dengan keseimbangan akurasi dan interpretasi model yang mudah. Model ini menunjukkan performa yang lebih baik dalam mengklasifikasikan kelas mayoritas (kelas 0), tetapi mengalami kesulitan dalam mendeteksi kelas minoritas (kelas 1), yang mengindikasikan perlunya pengembangan lebih lanjut untuk meningkatkan deteksi kelas minoritas agar hasil prediksi lebih seimbang.
+Pada evaluasi data test, model menunjukkan akurasi 74,67%, mengalami penurunan dibanding data training. Precision dan recall menurun pada kedua kelas, menunjukkan model memiliki performa yang lebih rendah saat diuji dengan data baru. Namun demikian, performa masih cukup baik dengan F1-score kelas 0 sebesar 0,75 dan kelas 1 sebesar 0,75. Model ini menunjukkan kemampuan generalisasi yang cukup dan stabil pada data test.
 
 ### 4. K-Nearest Neighbors (KNN)
-  <br>
-  <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.4-evaluation-knn_model-train.png" alt="Evaluation KNN Train Data" width="400" />
-  </p>
-<p align='center'>Gambar 14. Evaluation KNN (Train Data)</p>
 
-<p align="center">
+<br>  
+<p align='center'>  
+  <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.4-evaluation-knn_model-train.png" alt="Evaluation KNN Train Data" width="400" />  
+</p>  
+<p align='center'>Gambar 14. Evaluation KNN (Train Data)</p>  
 
-| Kelas         | Precision | Recall | F1-Score | Support |
-|---------------|-----------|--------|----------|---------|
-| 0             | 0.83      | 0.89   | 0.85     | 349     |
-| 1             | 0.75      | 0.65   | 0.70     | 188     |
-| **Accuracy**  |           |        | **0.80** | 537     |
-| **Macro Avg** | 0.79      | 0.77   | 0.78     | 537     |
-| **Weighted Avg**| 0.80    | 0.80   | 0.80     | 537     |
+<p align="center">  
 
-</p>
+| Kelas            | Precision | Recall | F1-Score | Support |
+| ---------------- | --------- | ------ | -------- | ------- |
+| 0                | 0.89      | 0.79   | 0.84     | 351     |
+| 1                | 0.81      | 0.90   | 0.86     | 349     |
+| **Accuracy**     |           |        | **0.85** | 700     |
+| **Macro Avg**    | 0.85      | 0.85   | 0.85     | 700     |
+| **Weighted Avg** | 0.85      | 0.85   | 0.85     | 700     |
 
+</p>  
 
-Model K-Nearest Neighbors (KNN) mampu memprediksi dengan benar sekitar 80.45% data training. Precision untuk kelas 0 adalah 0.83, artinya dari seluruh prediksi kelas 0, 83% tepat. Model ini juga berhasil mendeteksi 89% dari kelas 0 sebenarnya (recall 0.89), sehingga performa untuk kelas mayoritas cukup baik dengan f1-score 0.85 yang menunjukkan keseimbangan antara precision dan recall. Sedangkan untuk kelas 1, precision mencapai 0.75 dan recall sebesar 0.65, yang menunjukkan model menangkap 65% data kelas 1 sebenarnya. F1-score kelas 1 adalah 0.70, menunjukkan performa yang sedikit lebih rendah dibanding kelas 0 namun masih cukup baik. Kesimpulannya, model KNN bekerja dengan baik pada data training, terutama pada kelas mayoritas.
+Model K-Nearest Neighbors (KNN) mampu memprediksi dengan benar sekitar 84.86% data training. Precision untuk kelas 0 adalah 0.89, artinya dari seluruh prediksi kelas 0, 89% tepat. Model ini juga berhasil mendeteksi 79% dari kelas 0 sebenarnya (recall 0.79), sehingga performa untuk kelas mayoritas cukup baik dengan f1-score 0.84 yang menunjukkan keseimbangan antara precision dan recall. Sedangkan untuk kelas 1, precision mencapai 0.81 dan recall sebesar 0.90, yang menunjukkan model menangkap 90% data kelas 1 sebenarnya. F1-score kelas 1 adalah 0.86, menunjukkan performa yang sedikit lebih baik dibanding kelas 0. Kesimpulannya, model KNN bekerja dengan baik pada data training, terutama pada kelas mayoritas dan minoritas.
 
-  <br>
-  <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.4-evaluation-knn_model-test.png" alt="Evaluation KNN Test Data" width="400" />
-  </p>
-<p align='center'>Gambar 15. Evaluation KNN (Test Data)</p>
+<br>  
+<p align='center'>  
+  <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.4-evaluation-knn_model-test.png" alt="Evaluation KNN Test Data" width="400" />  
+</p>  
+<p align='center'>Gambar 15. Evaluation KNN (Test Data)</p>  
 
-<p align="center">
+<p align="center">  
 
-| Kelas         | Precision | Recall | F1-Score | Support |
-|---------------|-----------|--------|----------|---------|
-| 0             | 0.77      | 0.75   | 0.76     | 151     |
-| 1             | 0.55      | 0.56   | 0.56     | 80      |
-| **Accuracy**  |           |        | **0.69** | 231     |
-| **Macro Avg** | 0.66      | 0.66   | 0.66     | 231     |
-| **Weighted Avg**| 0.69    | 0.69   | 0.69     | 231     |
+| Kelas            | Precision | Recall | F1-Score | Support |
+| ---------------- | --------- | ------ | -------- | ------- |
+| 0                | 0.79      | 0.70   | 0.74     | 149     |
+| 1                | 0.73      | 0.82   | 0.78     | 151     |
+| **Accuracy**     |           |        | **0.76** | 300     |
+| **Macro Avg**    | 0.76      | 0.76   | 0.76     | 300     |
+| **Weighted Avg** | 0.76      | 0.76   | 0.76     | 300     |
 
-</p>
+</p>  
 
+Pada data testing, akurasi model menurun menjadi 76.00%, menunjukkan performa yang menurun saat dihadapkan dengan data baru. Precision untuk kelas 0 turun menjadi 0.79 dan recall menjadi 0.70, sehingga model masih mampu mendeteksi sebagian besar kelas mayoritas, dengan f1-score 0.74 yang relatif stabil meski sedikit menurun. Namun, performa untuk kelas 1 menurun sedikit, dengan precision 0.73 dan recall 0.82, yang berarti model mengenali 82% data kelas 1 dengan cukup baik. F1-score kelas 1 menjadi 0.78, menandakan performa yang masih cukup baik untuk kelas minoritas pada data testing. Kesimpulannya, model KNN memiliki kemampuan generalisasi yang baik dengan performa sedikit menurun pada data test.
 
-Pada data testing, akurasi model menurun menjadi 68.83%, menunjukkan performa yang menurun saat dihadapkan dengan data baru. Precision untuk kelas 0 turun menjadi 0.77 dan recall menjadi 0.75, sehingga model masih mampu mendeteksi sebagian besar kelas mayoritas, dengan f1-score 0.76 yang relatif stabil meski sedikit menurun. Namun, performa untuk kelas 1 menurun signifikan, dengan precision hanya 0.55 dan recall 0.56, yang berarti banyak prediksi kelas 1 yang salah dan model hanya mengenali 56% kelas 1 yang sebenarnya. F1-score kelas 1 menjadi 0.56, menandakan performa yang relatif lemah untuk kelas minoritas pada data testing. Kesimpulannya, model KNN kurang mampu melakukan generalisasi dengan baik untuk kelas minoritas pada data testing dan membutuhkan peningkatan khusus pada deteksi kelas 1.
-
-Model KNN menunjukkan performa baik pada data training, tetapi mengalami penurunan performa yang cukup signifikan pada data testing, terutama untuk kelas minoritas, yang mengindikasikan kebutuhan pengoptimalan lebih lanjut agar model dapat lebih robust dan seimbang dalam memprediksi kedua kelas.
-
-
-### 5. Support Vector Machine (SVM)
-<br>
-  <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.5-evaluation-svm_model-train.png" alt="Evaluation SVM Train Data" width="400" />
-  </p>
-<p align='center'>Gambar 16. Evaluation SVM (Train Data)</p>
-
-<p align="center">
-
-| Kelas         | Precision | Recall | F1-Score | Support |
-|---------------|-----------|--------|----------|---------|
-| 0             | 0.77      | 0.94   | 0.85     | 349     |
-| 1             | 0.81      | 0.48   | 0.61     | 188     |
-| **Accuracy**  |           |        | **0.78** | 537     |
-| **Macro Avg** | 0.79      | 0.71   | 0.73     | 537     |
-| **Weighted Avg**| 0.79    | 0.78   | 0.76     | 537     |
-
-</p>
-
-
-Model Support Vector Machine (SVM) memprediksi dengan benar sekitar 78.03% data training. Precision untuk kelas 0 adalah 0.77, yang berarti dari semua prediksi kelas 0, 77% tepat. Model ini sangat baik dalam mendeteksi 94% data kelas 0 sebenarnya (recall 0.94), sehingga performanya untuk kelas mayoritas cukup tinggi dengan f1-score 0.85 yang menunjukkan keseimbangan baik antara precision dan recall. Untuk kelas 1, precision mencapai 0.81, namun recall hanya 0.48, yang berarti model hanya mendeteksi kurang dari setengah data kelas 1 sebenarnya. F1-score kelas 1 sebesar 0.61 menunjukkan performa yang lebih rendah dan perlu perbaikan. Kesimpulannya, model bekerja lebih baik pada kelas mayoritas, tetapi mengalami kesulitan dalam mendeteksi kelas minoritas selama pelatihan.
-
-  <br>
-  <p align='center'>
-    <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.5-evaluation-svm_model-test.png" alt="Evaluation SVM Test Data" width="400" />
-  </p>
-<p align='center'>Gambar 17. Evaluation SVM (Test Data)</p>
-
-<p align="center">
-
-| Kelas         | Precision | Recall | F1-Score | Support |
-|---------------|-----------|--------|----------|---------|
-| 0             | 0.78      | 0.87   | 0.82     | 151     |
-| 1             | 0.68      | 0.53   | 0.59     | 80      |
-| **Accuracy**  |           |        | **0.75** | 231     |
-| **Macro Avg** | 0.73      | 0.70   | 0.71     | 231     |
-| **Weighted Avg**| 0.74    | 0.75   | 0.74     | 231     |
-
-</p>
-
-
-Pada data testing, akurasi model sedikit menurun menjadi 74.89%, namun masih cukup stabil. Presisi kelas 0 tetap baik di angka 0.78 dan model mampu mendeteksi 87% data kelas 0 (recall 0.87), sehingga performa kelas mayoritas tetap kuat dengan f1-score 0.82 yang stabil. Untuk kelas 1, presisi turun menjadi 0.68 dan recall menjadi 0.53, yang menunjukkan model hanya berhasil mendeteksi sedikit lebih dari setengah data kelas 1 sebenarnya. F1-score kelas 1 menjadi 0.59, menandakan performa yang relatif rendah pada data testing. Kesimpulannya, model SVM kurang efektif dalam mendeteksi kelas minoritas dan perlu optimasi lebih lanjut terutama untuk meningkatkan recall dan f1-score pada kelas 1.
-
-Model SVM cukup efektif untuk memprediksi kelas mayoritas, namun memiliki kesulitan signifikan dalam mendeteksi kelas minoritas sehingga membutuhkan peningkatan performa khusus untuk kelas 1 agar hasil prediksi lebih seimbang dan akurat.
+Berikut format evaluasi **model Support Vector Machine (SVM)** sesuai data dan struktur yang kamu berikan:
 
 ---
 
-### Kesimpulan 
+## Evaluasi Model
 
-Berdasarkan hasil evaluasi, dapat diambil beberapa poin penting terkait performa model:
-| Model               | Accuracy | F1-Score | AUC-ROC    |
-| ------------------- | -------- | -------- | ---------- |
-| Random Forest       | 0.7446   | 0.6144   | **0.8035** |
-| XGBoost             | 0.7403   |**0.6386**| 0.7946     |
-| Logistic Regression | 0.7446   | 0.6242   | 0.8006     |
-| KNN                 | 0.6883   | 0.5556   | 0.7268     |
-| SVM                 | 0.7489   | 0.5915   | 0.7776     |
+### 5. Support Vector Machine (SVM)
 
-* **Random Forest** merupakan model terbaik berdasarkan nilai AUC-ROC tertinggi (0.8035), yang menunjukkan kemampuannya paling baik dalam membedakan pasien dengan diabetes dan tanpa diabetes secara keseluruhan. Model ini juga memiliki keseimbangan baik antara akurasi dan F1-Score, sehingga cocok untuk digunakan dalam aplikasi prediksi klinis.
+<br>  
+<p align='center'>  
+  <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.5-evaluation-svm_model-train.png" alt="Evaluation SVM Train Data" width="400" />  
+</p>  
+<p align='center'>Gambar 16. Evaluation SVM (Train Data)</p>  
 
-* **XGBoost** menunjukkan performa F1-Score tertinggi (0.6386), menandakan efektivitasnya dalam menangani ketidakseimbangan kelas dan menjaga keseimbangan antara precision dan recall. Namun, AUC-ROC-nya sedikit di bawah Random Forest.
+<p align="center">  
 
-* **Logistic Regression** sebagai model baseline memberikan hasil yang kompetitif dan mudah diinterpretasikan, dengan AUC-ROC yang cukup mendekati model terbaik, menjadikannya pilihan baik jika interpretabilitas penting.
+| Kelas            | Precision | Recall | F1-Score | Support |
+| ---------------- | --------- | ------ | -------- | ------- |
+| 0                | 0.87      | 0.83   | 0.85     | 351     |
+| 1                | 0.84      | 0.87   | 0.85     | 349     |
+| **Accuracy**     |           |        | **0.85** | 700     |
+| **Macro Avg**    | 0.85      | 0.85   | 0.85     | 700     |
+| **Weighted Avg** | 0.85      | 0.85   | 0.85     | 700     |
 
-* **Support Vector Machine (SVM)** memiliki akurasi tertinggi (74.89%), namun F1-Score dan AUC-ROC-nya masih di bawah Random Forest dan XGBoost, sehingga perlu tuning lebih lanjut agar lebih optimal.
+</p>  
 
-* **K-Nearest Neighbors (KNN)** menunjukkan performa paling rendah di semua metrik, kurang cocok untuk dataset dan masalah ini.
+Model Support Vector Machine (SVM) menunjukkan akurasi sebesar 85.00% pada data training. Precision untuk kelas 0 sebesar 0.87 menunjukkan dari seluruh prediksi kelas 0, 87% adalah benar. Recall kelas 0 sebesar 0.83 menunjukkan model berhasil mendeteksi 83% dari data kelas 0 sebenarnya. F1-score kelas 0 sebesar 0.85 menandakan performa yang baik dan seimbang pada kelas mayoritas. Untuk kelas 1, precision sebesar 0.84 dan recall sebesar 0.87 menandakan model mampu mendeteksi 87% data kelas 1 dengan akurat. F1-score kelas 1 sebesar 0.85 juga menunjukkan performa yang seimbang dan kuat. Secara keseluruhan, model bekerja dengan baik pada data training.
 
+<br>  
+<p align='center'>  
+  <img src="https://raw.githubusercontent.com/labibaadinda/diabetes-predictive-analytics/main/img/6.5-evaluation-svm_model-test.png" alt="Evaluation SVM Test Data" width="400" />  
+</p>  
+<p align='center'>Gambar 17. Evaluation SVM (Test Data)</p>  
 
-Berdasarkan evaluasi berbagai model machine learning dalam proyek prediksi penyakit diabetes, dapat disimpulkan bahwa:
+<p align="center">  
 
-- **Model yang dikembangkan telah berhasil menjawab seluruh problem statement** yang diajukan, yaitu mampu memprediksi status diabetes secara efektif menggunakan data medis pasien. Model terbaik, Random Forest, menunjukkan performa akurasi dan AUC-ROC yang memadai untuk mendukung diagnosis klinis.
+| Kelas            | Precision | Recall | F1-Score | Support |
+| ---------------- | --------- | ------ | -------- | ------- |
+| 0                | 0.80      | 0.74   | 0.77     | 149     |
+| 1                | 0.76      | 0.82   | 0.79     | 151     |
+| **Accuracy**     |           |        | **0.78** | 300     |
+| **Macro Avg**    | 0.78      | 0.78   | 0.78     | 300     |
+| **Weighted Avg** | 0.78      | 0.78   | 0.78     | 300     |
 
-- **Tujuan proyek telah tercapai dengan baik,** meliputi pemahaman penerapan algoritma machine learning, pengembangan model yang tepat, serta evaluasi kinerja secara menyeluruh menggunakan metrik akurasi, F1-score, dan AUC. Proses ini memberikan gambaran lengkap tentang kekuatan dan keterbatasan tiap model.
+</p>  
 
+Pada evaluasi data test, model mencapai akurasi 78.00%. Precision dan recall untuk kelas 0 masing-masing 0.80 dan 0.74, menunjukkan model cukup baik dalam memprediksi kelas mayoritas dengan F1-score 0.77 yang cukup seimbang. Untuk kelas 1, precision 0.76 dan recall 0.82 menandakan model cukup baik dalam mendeteksi data kelas minoritas dengan F1-score 0.79. Model ini menunjukkan kemampuan generalisasi yang baik meskipun terdapat sedikit penurunan performa dibandingkan data training.
 
+---
 
+## Kesimpulan
+
+Berdasarkan hasil evaluasi, berikut rangkuman performa beberapa model:
+
+<p align="center">  
+
+| Model                        | Accuracy | F1-Score   | AUC-ROC    |
+| ---------------------------- | -------- | ---------- | ---------- |
+| Random Forest                | 0.7567   | 0.7712     | **0.8375** |
+| XGBoost                      | 0.7600   | **0.7778** | 0.8215     |
+| Logistic Regression          | 0.7467   | 0.7467     | 0.8453     |
+| K-Nearest Neighbors (KNN)    | 0.7600   | 0.7750     | 0.8372     |
+| Support Vector Machine (SVM) | 0.7800   | 0.7898     | 0.8443     |
+
+</p>
+
+* **Random Forest** unggul pada AUC-ROC tertinggi (0.8375), menandakan kemampuan terbaik membedakan pasien dengan dan tanpa diabetes secara keseluruhan, serta keseimbangan baik antara akurasi dan F1-score. Cocok untuk aplikasi prediksi klinis.
+
+* **XGBoost** memiliki F1-Score tertinggi (0.7778), efektif menangani ketidakseimbangan kelas dan menjaga keseimbangan precision-recall. Namun AUC-ROC sedikit lebih rendah dari Random Forest.
+
+* **Logistic Regression** sebagai model baseline menunjukkan AUC-ROC terbaik (0.8453), menjadikannya pilihan baik bila interpretabilitas penting, meskipun akurasi dan F1-score sedikit di bawah model lain.
+
+* **SVM** memiliki akurasi (0.78) dan F1-Score (0.7898) tertinggi, tapi AUC-ROC-nya lebih rendah dari Logistic Regression dan Random Forest, menunjukkan perlu tuning lebih lanjut.
+
+* **KNN** memiliki performa paling rendah secara umum, kurang ideal untuk dataset ini.
+
+### Hubungan dengan Business Understanding
+
+* **Menjawab Problem Statement:** Model mampu memprediksi status diabetes dengan baik sesuai kebutuhan analisis medis.
+
+* **Mencapai Goals:** Evaluasi menyeluruh menggunakan metrik akurasi, F1-score, dan AUC membuktikan keberhasilan pengembangan model efektif.
+
+---
+
+**Kesimpulan akhir:**
+Berdasarkan metrik AUC-ROC sebagai indikator utama, **Logistic Regression** terpilih sebagai model terbaik dengan skor 0.8453, walaupun SVM dan Random Forest menunjukkan akurasi dan F1-Score yang kompetitif. Pemilihan model akhir bisa mempertimbangkan kebutuhan khusus seperti interpretabilitas dan keseimbangan precision-recall.
