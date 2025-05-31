@@ -381,7 +381,6 @@ Pada evaluasi model Random Forest untuk data training, model menunjukkan akurasi
 
 Pada evaluasi data test, model menunjukkan akurasi 75,67%, mengalami penurunan dibanding data training. Precision dan recall menurun pada kedua kelas, menunjukkan model memiliki performa yang lebih rendah saat diuji dengan data baru. Namun demikian, performa masih cukup baik dengan F1-score kelas 0 sebesar 0,74 dan kelas 1 sebesar 0,77. Model ini menunjukkan kemampuan generalisasi yang cukup namun masih perlu peningkatan terutama pada data test.
 
-Berikut format lengkap untuk evaluasi **model XGBoost** sesuai data yang kamu berikan dan struktur yang diinginkan:
 
 ### 2. XGBoost
 
@@ -426,7 +425,6 @@ Model XGBoost menunjukkan performa yang sangat baik pada data training dengan ak
 Pada evaluasi data test, model mengalami penurunan performa cukup signifikan dengan akurasi turun menjadi 76.00%. Precision kelas 0 sebesar 0.80 menunjukkan kemampuan model dalam memprediksi kelas 0 masih cukup baik, namun recall turun ke 0.68 yang menandakan beberapa data kelas 0 terlewat. F1-score kelas 0 sebesar 0.74 masih cukup memadai. Untuk kelas 1, precision menurun menjadi 0.73 dan recall meningkat menjadi 0.83, menunjukkan model lebih baik dalam mendeteksi kelas 1 namun prediksi kurang presisi. F1-score sebesar 0.78 mengindikasikan performa yang baik tapi masih ada ruang untuk peningkatan. Penurunan performa ini terutama pada data test dan pada kelas minoritas (kelas 1) mengindikasikan kemungkinan overfitting pada model.
 
 Secara keseluruhan, model XGBoost sangat kuat dan efektif saat pelatihan dengan performa mendekati sempurna. Namun, performa pada data test menurun yang mengindikasikan kurangnya kemampuan generalisasi. Oleh karena itu, perlu dilakukan optimasi lebih lanjut seperti regularisasi, tuning hyperparameter, atau penanganan ketidakseimbangan data untuk meningkatkan performa model pada data baru.
-Berikut format evaluasi **model Logistic Regression** sesuai data yang kamu berikan:
 
 ### 3. Logistic Regression
 
