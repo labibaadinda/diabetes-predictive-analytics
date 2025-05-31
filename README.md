@@ -512,12 +512,6 @@ Model K-Nearest Neighbors (KNN) mampu memprediksi dengan benar sekitar 84.86% da
 
 Pada data testing, akurasi model menurun menjadi 76.00%, menunjukkan performa yang menurun saat dihadapkan dengan data baru. Precision untuk kelas 0 turun menjadi 0.79 dan recall menjadi 0.70, sehingga model masih mampu mendeteksi sebagian besar kelas mayoritas, dengan f1-score 0.74 yang relatif stabil meski sedikit menurun. Namun, performa untuk kelas 1 menurun sedikit, dengan precision 0.73 dan recall 0.82, yang berarti model mengenali 82% data kelas 1 dengan cukup baik. F1-score kelas 1 menjadi 0.78, menandakan performa yang masih cukup baik untuk kelas minoritas pada data testing. Kesimpulannya, model KNN memiliki kemampuan generalisasi yang baik dengan performa sedikit menurun pada data test.
 
-Berikut format evaluasi **model Support Vector Machine (SVM)** sesuai data dan struktur yang kamu berikan:
-
----
-
-## Evaluasi Model
-
 ### 5. Support Vector Machine (SVM)
 
 <br>  
