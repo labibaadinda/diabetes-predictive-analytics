@@ -562,9 +562,9 @@ Berdasarkan hasil evaluasi, berikut rangkuman performa beberapa model:
 
 | Model                        | Accuracy | F1-Score   | AUC-ROC    |
 | ---------------------------- | -------- | ---------- | ---------- |
-| Random Forest                | 0.7567   | 0.7712     | **0.8375** |
+| Random Forest                | 0.7567   | 0.7712     | 0.8375 |
 | XGBoost                      | 0.7600   | **0.7778** | 0.8215     |
-| Logistic Regression          | 0.7467   | 0.7467     | 0.8453     |
+| Logistic Regression          | 0.7467   | 0.7467     | **0.8453**     |
 | K-Nearest Neighbors (KNN)    | 0.7600   | 0.7750     | 0.8372     |
 | Support Vector Machine (SVM) | 0.7800   | 0.7898     | 0.8443     |
 
